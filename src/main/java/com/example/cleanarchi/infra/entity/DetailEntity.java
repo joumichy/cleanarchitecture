@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity(name = "detail")
 @Table(name ="detail")
-public class Detail {
+public class DetailEntity {
     @Id
     @NotNull
     @Column(name = "iddetail")
@@ -19,6 +19,22 @@ public class Detail {
     @Column(name = "value")
     private String value;
 
+    public Integer getIddetail() {
+        return iddetail;
+    }
 
+    public void setIddetail(Integer iddetail) {
+        this.iddetail = iddetail;
+    }
 
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public DetailEntity() {
+    }
 }

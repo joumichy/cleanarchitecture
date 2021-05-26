@@ -2,7 +2,7 @@ package com.example.cleanarchi.infra.dao;
 
 
 import com.example.cleanarchi.infra.entity.UserEntity;
-import com.example.cleanarchi.model.IUserRepository;
+import com.example.cleanarchi.model.user.IUserRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

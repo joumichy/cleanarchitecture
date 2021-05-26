@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity(name = "productcatalog")
 @Table(name ="productcatalog")
-public class ProductCatalog {
+public class ProductCatalogEntity {
     @Id
     @NotNull
     @Column(name = "idproduct")
@@ -68,6 +68,6 @@ public class ProductCatalog {
         this.detail = detail;
     }
 
-    public ProductCatalog() {
+    public ProductCatalogEntity() {
     }
 }

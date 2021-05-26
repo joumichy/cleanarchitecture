@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity(name ="sellhistory")
 @Table(name = "sellhistory")
-public class SellHistory {
+public class SellHistoryEntity {
 
 
     @NotNull
@@ -50,6 +50,6 @@ public class SellHistory {
         this.idproductsellhistory = idproductsellhistory;
     }
 
-    public SellHistory() {
+    public SellHistoryEntity() {
     }
 }
