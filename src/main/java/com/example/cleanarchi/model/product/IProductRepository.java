@@ -1,6 +1,9 @@
 package com.example.cleanarchi.model.product;
 
+import java.util.List;
+
 public interface IProductRepository {
 
-    ProductInfo getProductInfo(Integer idProduct);
+    ProductInfo getProductById(Integer id);
+    List<ProductInfo> getAllProduct();
 }

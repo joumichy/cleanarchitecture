@@ -25,12 +25,10 @@ public class ProductCatalogEntity {
     private String category;
 
     @NotNull
-    @Column(name = "detail")
-    private Integer detail;
+    @Column(name = "details")
+    private Integer details;
 
-    @OneToOne
-    @JoinColumn(name = "prices_id", nullable = false)
-    private PricesEntity price;
+
 
     public Integer getIdproduct() {
         return idproduct;
@@ -64,13 +62,15 @@ public class ProductCatalogEntity {
         this.category = category;
     }
 
-    public Integer getDetail() {
-        return detail;
+    public Integer getDetails() {
+        return details;
     }
 
-    public void setDetail(Integer detail) {
-        this.detail = detail;
+    public void setDetails(Integer details) {
+        this.details = details;
     }
+
+
 
     public ProductCatalogEntity() {
     }

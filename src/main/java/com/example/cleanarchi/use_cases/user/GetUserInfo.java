@@ -1,4 +1,4 @@
-package com.example.cleanarchi.use_cases;
+package com.example.cleanarchi.use_cases.user;
 
 import com.example.cleanarchi.infra.entity.UserEntity;
 import com.example.cleanarchi.infra.dao.UserRepository;

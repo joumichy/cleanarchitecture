@@ -1,7 +1,8 @@
-package com.example.cleanarchi.use_cases;
+package com.example.cleanarchi.use_cases.product;
 
 import com.example.cleanarchi.infra.dao.ProductCatalogRepository;
 import com.example.cleanarchi.infra.entity.ProductCatalogEntity;
+import com.example.cleanarchi.model.product.ProductInfo;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,8 +14,8 @@ public class GetProductById {
         this.productRepository = productRepository;
     }
 
-    public ProductCatalogEntity execute(Integer idProduct){
-        return productRepository.getById(idProduct);
+    public ProductInfo execute(Integer idProduct){
+        return productRepository.getProductById(idProduct);
     }
 
 }

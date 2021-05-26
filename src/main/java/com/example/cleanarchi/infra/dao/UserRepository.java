@@ -15,9 +15,6 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Integer>, IUserRepository {
 
-//    @Query(value = "Select * from users where idusers=:idusers", nativeQuery = true)
-//    UserEntity getUserInfo(Integer idusers);
-
     @Override
     default UserInfo getUserInformation(Integer userId) {
         List<UserEntity> users = findAll();

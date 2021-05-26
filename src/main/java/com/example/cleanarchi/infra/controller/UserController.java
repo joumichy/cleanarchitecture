@@ -1,9 +1,8 @@
 package com.example.cleanarchi.infra.controller;
 
-import com.example.cleanarchi.infra.entity.UserEntity;
 import com.example.cleanarchi.model.user.UserInfo;
-import com.example.cleanarchi.use_cases.GetAllUsersInfo;
-import com.example.cleanarchi.use_cases.GetUserInfo;
+import com.example.cleanarchi.use_cases.user.GetAllUsersInfo;
+import com.example.cleanarchi.use_cases.user.GetUserInfo;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,10 +24,6 @@ public class UserController {
         this.getAllUsersInfo = getAllUsersInfo;
     }
 
-    @GetMapping(value = "test/{cle}")
-    public String test(@PathVariable(name ="cle") String cle){
-        return cle;
-    }
 
     @GetMapping(value = {"{id}"})
     public ResponseEntity<?> getUserInfoById(@PathVariable(name ="id") Integer id){
