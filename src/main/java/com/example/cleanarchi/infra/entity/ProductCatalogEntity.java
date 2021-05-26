@@ -28,6 +28,10 @@ public class ProductCatalogEntity {
     @Column(name = "detail")
     private Integer detail;
 
+    @OneToOne
+    @JoinColumn(name = "prices_id", nullable = false)
+    private PricesEntity price;
+
     public Integer getIdproduct() {
         return idproduct;
     }
