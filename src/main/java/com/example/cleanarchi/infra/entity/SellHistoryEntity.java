@@ -12,17 +12,17 @@ import javax.persistence.Table;
 public class SellHistoryEntity {
 
 
+    @Id
+    @NotNull
+    @Column(name = "idusersellhistory")
+    private Integer idusersellhistory;
+
     @NotNull
     @Column(name = "date")
     private String date;
 
 
-    @NotNull
-    @Column(name = "idusersellhistory")
-    private Integer idusersellhistory;
 
-
-    @NotNull
     @Column(name = "idproductsellhistory")
     private Integer idproductsellhistory;
 

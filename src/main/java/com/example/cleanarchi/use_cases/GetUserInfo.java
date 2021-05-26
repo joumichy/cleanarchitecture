@@ -2,6 +2,8 @@ package com.example.cleanarchi.use_cases;
 
 import com.example.cleanarchi.infra.entity.UserEntity;
 import com.example.cleanarchi.infra.dao.UserRepository;
+import com.example.cleanarchi.model.user.UserInfo;
+import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
 
@@ -15,7 +17,7 @@ public class GetUserInfo {
     }
 
 
-    public UserEntity execute(Integer idusers){
-        return userRepository.getUserInfo(idusers);
+    public UserInfo execute(Integer idusers){
+        return userRepository.getUserInformation(idusers);
     }
 }

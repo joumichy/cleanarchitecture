@@ -1,4 +1,5 @@
 package com.example.cleanarchi.model.detail;
 
-public class IDetailRepository {
+public interface IDetailRepository {
+    DetailInfo getDetailInfo(Integer idProduct);
 }
