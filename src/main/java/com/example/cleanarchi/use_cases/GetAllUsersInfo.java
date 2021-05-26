@@ -2,6 +2,7 @@ package com.example.cleanarchi.use_cases;
 
 import com.example.cleanarchi.infra.entity.UserEntity;
 import com.example.cleanarchi.infra.dao.UserRepository;
+import com.example.cleanarchi.model.user.UserInfo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public class GetAllUsersInfo {
     }
 
 
-    public List<UserEntity> execute(){
-        return userRepository.getAllUserInfo();
+    public List<UserInfo> execute(){
+        return userRepository.getAllUsersInfo();
     }
 }

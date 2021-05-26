@@ -1,6 +1,7 @@
 package com.example.cleanarchi.infra.controller;
 
 import com.example.cleanarchi.infra.entity.UserEntity;
+import com.example.cleanarchi.model.user.UserInfo;
 import com.example.cleanarchi.use_cases.GetAllUsersInfo;
 import com.example.cleanarchi.use_cases.GetUserInfo;
 import org.springframework.http.HttpStatus;
@@ -32,7 +33,7 @@ public class UserController {
     @GetMapping(value = {"{id}"})
     public ResponseEntity<?> getUserInfoById(@PathVariable(name ="id") Integer id){
         if(id != null){
-            UserEntity user = getUserInfo.execute(id);
+            UserInfo user = getUserInfo.execute(id);
             return new ResponseEntity<>(user, HttpStatus.OK);
         }
         else{
@@ -43,7 +44,7 @@ public class UserController {
     @GetMapping(value ="/all")
     public ResponseEntity<?> getAllUsersInfo(){
         try{
-            List<UserEntity> users = getAllUsersInfo.execute();
+            List<UserInfo> users = getAllUsersInfo.execute();
             return new ResponseEntity<>(users, HttpStatus.OK);
 
         }catch (Exception e){
